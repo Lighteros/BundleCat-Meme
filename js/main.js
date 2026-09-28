@@ -26,6 +26,27 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  const contract = "0x8e175582a9cae219ffd84a991fd9b8c94ea562bd";
+  document.querySelectorAll("[data-copy]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const label = "Copy";
+      try {
+        await navigator.clipboard.writeText(contract);
+        button.textContent = "Copied";
+        button.classList.add("is-done");
+        window.setTimeout(() => {
+          button.textContent = label;
+          button.classList.remove("is-done");
+        }, 1600);
+      } catch {
+        button.textContent = "Failed";
+        window.setTimeout(() => {
+          button.textContent = label;
+        }, 1600);
+      }
+    });
+  });
+
   menu.addEventListener("click", () => {
     const open = nav.classList.toggle("is-open");
     menu.classList.toggle("is-open", open);
