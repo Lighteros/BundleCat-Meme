@@ -722,7 +722,11 @@ h3 {
 .ico-x { -webkit-mask-image: url("../icons/x.svg"); mask-image: url("../icons/x.svg"); }
 .ico-dex { -webkit-mask-image: url("../icons/dexscreener.svg"); mask-image: url("../icons/dexscreener.svg"); }
 .ico-uni { -webkit-mask-image: url("../icons/uniswap.svg"); mask-image: url("../icons/uniswap.svg"); }
-.ico-scout { -webkit-mask-image: url("../icons/blockscout.svg"); mask-image: url("../icons/blockscout.svg"); }
+.brand-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
 .socials .ico { width: 28px; height: 28px; color: var(--steel); }
 .socials a:hover .ico { color: var(--rose); }
 
